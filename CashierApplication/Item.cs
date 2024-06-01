@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ItemNameSpace { 
 
-    internal class Item
+    public abstract class Item
     {
         protected string item_name;
         protected double item_price;

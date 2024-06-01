@@ -16,15 +16,15 @@ namespace ItemNameSpace {
         
         public DiscountedItem(string name, double price, int quantity, double discount): base(name, price, quantity) 
         {
-            this.item_discount = discount;
-            discounted_price = 0;
-            payment_amount = 0;
-            change = 0;
+            this.item_discount = discount * 0.01;
+            this.discounted_price = 0.0;
+            this.payment_amount = 0.0;
+            this.change = 0.0;
         }
         public override double getTotalPrice()
         {
 
-            discounted_price = item_price * (0.01 * item_discount);
+            discounted_price = item_price * (1 * item_discount);
             total_price = discounted_price * item_quantity;
             return total_price;
         }
